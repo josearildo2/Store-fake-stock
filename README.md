@@ -30,7 +30,7 @@ cd Store-fake-stock
 npm install
 ```
 
-Antes de subir os containers do docker, substitua o arquivo .env existente pelo .env.example
+Antes de subir os containers do docker, copie o arquivo .env.example e remove o .example
 ```sh
 cp .env.example .env
 ```
