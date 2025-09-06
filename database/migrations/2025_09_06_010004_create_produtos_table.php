@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('produtos', function (Blueprint $table) {
             $table->id();
+            $table->string('nome');
+            $table->string('preco');
+            $table->string('estoque')->default(0);
             $table->timestamps();
         });
     }

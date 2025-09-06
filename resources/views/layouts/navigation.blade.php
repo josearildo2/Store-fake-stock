@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 space-x-8 flex items-center">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('produtos.index')" :active="request()->routeIs('produtos.index')">
                         {{ __('Produtos') }}
                     </x-nav-link>
                 </div>
