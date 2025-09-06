@@ -4,10 +4,17 @@ Projeto feito em Laravel utilizando seu componente nativo (Blade) junto do Breez
 
 ## Tecnologias utilizadas no projeto
 
-[Laravel](https://laravel.com/docs/12.x) <br>
+[Laravel 10+](https://laravel.com/docs/12.x) <br>
 [Docker](https://www.docker.com/) <br>
 [MySQL](https://www.mysql.com/) <br>
 [TailwindCSS](https://tailwindcss.com/) <br>
+[Breeze](https://laravel.com/docs/10.x/starter-kits) <br>
+[Blade](https://laravel.com/docs/12.x/blade) <br>
+
+## Pré-requisitos
+- Docker e Docker Compose
+- Node.js 16+ (para compilação dos assets)
+- Git
 
 ## Como iniciar o projeto
 
