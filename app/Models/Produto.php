@@ -12,7 +12,8 @@ class Produto extends Model
 
     protected $table = 'produtos';
 
+    // Apenas o estoque poderá ser editável
     protected $fillable = [
-        'nome', 'preco', 'estoque'
+        'nome', 'preco', 'estoque', 'external_id'
     ];
 }

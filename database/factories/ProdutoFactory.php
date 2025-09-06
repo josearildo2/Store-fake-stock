@@ -27,7 +27,7 @@ class ProdutoFactory extends Factory
         return [
             'nome' => $this->faker->unique()->words(3, true),
             'preco' => $this->faker->randomFloat(2, 10, 1000),
-            'estoque' => $this->faker->numberBetween(0, 100),
+            'external_id' => $this->faker->numberBetween(30, 100),
         ];
     }
 }

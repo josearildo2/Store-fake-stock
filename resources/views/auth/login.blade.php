@@ -29,5 +29,12 @@
                 {{ __('Logar') }}
             </x-primary-button>
         </div>
+
+        <div>
+            <span class="text-xs">*Login: teste@exemplo.com</span>
+        </div>
+        <div>
+            <span class="text-xs">*Senha: password</span>
+        </div>
     </form>
 </x-guest-layout>

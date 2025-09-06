@@ -17,12 +17,12 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        Produto::factory(5)->create();
+        // Produto::factory(10)->create();
 
-        // User::factory()->create([
-        //     'name' => 'Usuario teste',
-        //     'email' => 'teste@exemplo.com',
-        //     'password' => Hash::make('password')
-        // ]);
+        User::factory()->create([
+            'name' => 'Usuario teste',
+            'email' => 'teste@exemplo.com',
+            'password' => Hash::make('password')
+        ]);
     }
 }
