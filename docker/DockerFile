@@ -1,0 +1,42 @@
+FROM php:8.3-fpm
+
+# Instalar dependências do sistema
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libpng-dev \
+    libjpeg62-turbo-dev \
+    libfreetype6-dev \
+    libonig-dev \
+    libxml2-dev \
+    zip \
+    curl \
+    unzip \
+    git \
+    npm \
+    nodejs \
+    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
+
+# Instalar Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+# Definir pasta de trabalho
+WORKDIR /var/www
+
+# Copiar arquivos do projeto
+COPY . .
+
+# Instalar dependências Laravel (modo dev)
+RUN composer install
+
+# Variáveis de build para o usuario do bash (antes de executar, confirme que os args estejam no .env)
+ARG UID=1000
+ARG GID=1000
+
+# Criar grupo e usuário com o UID e GID do host
+RUN groupadd -g ${GID} laraveluser && \
+    useradd -u ${UID} -g ${GID} -m laraveluser
+
+# Expor porta do PHP-FPM
+EXPOSE 9000
+
+CMD ["php-fpm"]
