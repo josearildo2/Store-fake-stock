@@ -14,7 +14,7 @@ Projeto feito em Laravel utilizando seu componente nativo (Blade) junto do Breez
 Clone o repositório
 
 ```sh
-git clone -b https://github.com/josearildo2/Store-fake-stock.git
+git clone https://github.com/josearildo2/Store-fake-stock.git
 ```
 
 Acesse a pasta do projeto que foi clonada e instale as dependências necessárias do node
@@ -25,8 +25,7 @@ npm install
 
 Antes de subir os containers do docker, substitua o arquivo .env existente pelo .env.example
 ```sh
-rm .env
-mv .env.example .env
+cp .env.example .env
 ```
 
 Agora suba os containers do docker com o comando do docker-compose (é necessário passar pela etapa anterior para a definição das variáveis de build)
@@ -42,7 +41,13 @@ docker exec -it store-fake-app bash
 composer install
 ```
 
-Por fim, execute o comando abaixo fora do conteiner para compilar o CSS do Tailwind corretamente.
+Ainda dentro do container, para iniciar o projeto, o banco precisa ser migrado e criado o usuário para testes do sistema utilizando o seeder
+```sh
+php artisan migrate
+php artisan db:seed
+```
+
+Por fim, execute o comando abaixo fora do container para compilar o CSS do Tailwind corretamente.
 ```sh
 exit
 npm run dev
