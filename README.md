@@ -13,7 +13,7 @@ Projeto feito em Laravel utilizando seu componente nativo (Blade) junto do Breez
 
 ## Pré-requisitos
 - Docker e Docker Compose
-- Node.js 16+ (para compilação dos assets)
+- Node.js 20+ (para compilação dos assets)
 - Git
 
 ## Como iniciar o projeto
