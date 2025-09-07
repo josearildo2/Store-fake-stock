@@ -47,7 +47,7 @@
                                 <td class="px-1 py-2 flex justify-center">
                                     <div class="flex items-center gap-2">
                                         <a href="{{ route('produtos.edit', $produto->id) }}">
-                                            <button class="cursor-pointer px-2.5 py-2 text-xs font-medium text-white bg-blue-700 rounded-md hover:bg-blue-800 
+                                            <button type="button" class="cursor-pointer px-2.5 py-2 text-xs font-medium text-white bg-blue-700 rounded-md hover:bg-blue-800 
                                                 focus:ring-1 focus:outline-none focus:ring-blue-300">
                                                 Editar
                                             </button>
@@ -56,7 +56,7 @@
                                             @csrf
                                             @method('DELETE')
 
-                                            <button onclick="return confirm('Tem certeza que deseja deletar este produto?')" 
+                                            <button type="submit" onclick="return confirm('Tem certeza que deseja deletar este produto?')" 
                                                 class="cursor-pointer px-2.5 py-2 text-xs font-medium text-white bg-red-700 rounded-md hover:bg-red-800 
                                                 focus:ring-1 focus:outline-none focus:ring-red-300">
                                                 Deletar
