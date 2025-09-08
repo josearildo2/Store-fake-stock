@@ -27,6 +27,8 @@ git clone https://github.com/josearildo2/Store-fake-stock.git
 Acesse a pasta do projeto que foi clonada e instale as dependências necessárias do node
 ```sh
 cd Store-fake-stock
+```
+```sh
 npm install
 ```
 
@@ -45,18 +47,24 @@ Certifique-se que o docker está funcionando corretamente e todos os containers 
 Acesse o container 'app' gerado pelo docker-compose e instale as dependências necessárias do container
 ```sh
 docker exec -it store-fake-app bash
+```
+```sh
 composer install
 ```
 
 Ainda dentro do container, para iniciar o projeto, o banco precisa ser migrado e criado o usuário para testes do sistema utilizando o seeder
 ```sh
 php artisan migrate
+```
+```sh
 php artisan db:seed
 ```
 
 Por fim, execute o comando abaixo fora do container para compilar o CSS do Tailwind corretamente.
 ```sh
 exit
+```
+```sh
 npm run dev
 ```
 
