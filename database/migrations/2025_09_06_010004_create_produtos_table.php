@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('produtos', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->decimal('preco', 10, 2);
+            $table->decimal('preco', 15, 2);
             $table->integer('estoque')->default(0);
             $table->unsignedBigInteger('external_id')->nullable()->unique();
             $table->timestamps();

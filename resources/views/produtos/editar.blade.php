@@ -19,7 +19,7 @@
                     </div>
                     <div class="w-1/3">
                         <x-input-label for="preco" value='Preço'/>
-                        <x-text-input type="text" id="preco" name="preco"
+                        <x-text-input type="number" id="preco" name="preco" min="0" step="0.01"
                             class="mt-1 block w-full" value="{{ old('preco', $produto->preco) }}"/>
                         @error('preco')
                             <x-input-error class="mt-2" :messages="$message" />

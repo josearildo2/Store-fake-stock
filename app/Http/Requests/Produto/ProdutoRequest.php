@@ -23,7 +23,7 @@ class ProdutoRequest extends FormRequest
     {
         return [
             'nome' => 'required|string',
-            'preco' => 'required',
+            'preco' => 'required|numeric|min:0|max:1000000000',
             'estoque' => 'required|min:0|integer'
         ];
     }
